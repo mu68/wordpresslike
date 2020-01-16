@@ -1,0 +1,15 @@
+{% extends 'journal/base.html' %}
+
+{% block content %}
+    <div class="article1">
+        <h2 class=" titre1">Nouvel article</h2>
+    </div>
+    <div class="formulaire">
+        <form method="POST" enctype="multipart/form-data" class="Post-form"> {% csrf_token %} <!--jeton qui contient un n° chiffé,ce num,losqu'on récup les donnée du formulaire,il est comparé-->
+            {{ form.as_p }} <!-- Montre que le formulaire existe bien-->
+            <button type="submit" class=" bouton ">Enregistrer</button>
+        </form>
+    
+    
+</div>
+{% endblock %}
